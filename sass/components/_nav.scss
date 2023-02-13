@@ -1,0 +1,15 @@
+header {
+  border: 1px red solid;
+}
+
+&__toggle:checked ~ &__dropl {
+  display: block;
+  li {
+    padding: 15rem 10rem;
+    border-bottom: 1px var(--delta) solid;
+  }
+}
+
+&__hamburger {
+  display: none;
+}
