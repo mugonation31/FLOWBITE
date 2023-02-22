@@ -1,0 +1,105 @@
+.team {
+  display: grid;
+  padding: 20rem;
+
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, min-content 1fr);
+    gap: 15rem;
+    padding-top: 30rem;
+    padding-bottom: 30rem;
+
+    h2 {
+      text-align: center;
+      align-content: center;
+      grid-row: 1/2;
+
+      color: var(--twh2);
+      font-size: 35rem;
+      line-height: 30rem;
+      font-weight: 700;
+      padding-bottom: 5rem;
+      padding-top: 3rem;
+      font-family: ui-sans-serif, system-ui, system-ui, Helvetica, Arial,
+        sans-serif, Color, Symbol, Color;
+      font-feature-settings: normal;
+    }
+
+    p {
+      grid-row: 2/3;
+      text-align: center;
+      font-size: 18rem;
+      tab-size: 4px;
+      opacity: 1;
+      word-spacing: 1rem;
+      font-weight: 300;
+      color: var(--twp);
+      font-family: ui-sans-serif, system-ui, system-ui, Helvetica, Arial,
+        sans-serif, Color, Symbol, Color;
+    }
+  }
+
+  &__member {
+    display: grid;
+    margin-bottom: 25rem;
+    border: 1px solid var(--header);
+    border-radius: 8rem;
+    background-color: var(--twbc);
+    box-shadow: 50px;
+  }
+
+  &__picture {
+    img {
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 8rem;
+      grid-row: 1/2;
+    }
+  }
+
+  &__title {
+    display: grid;
+    padding: 20rem;
+
+    h3 {
+      grid-row: 1/2;
+      padding-bottom: 3rem;
+      font-weight: 700;
+      font-size: 19rem;
+      font-family: ui-sans-serif, system-ui, system-ui, Helvetica, Arial,
+        sans-serif, Color, Symbol, Color;
+    }
+
+    p {
+      gap: 5rem;
+      grid-row: 2/3;
+      color: var(--twp);
+      font-family: ui-sans-serif, system-ui, system-ui, Helvetica, Arial,
+        sans-serif, Color, Symbol, Color;
+    }
+  }
+
+  &__blurb {
+    display: grid;
+    gap: 10rem;
+  }
+
+  &__socials {
+    display: grid;
+    margin-top: 10rem;
+
+    ul {
+      display: grid;
+      grid-template-columns: min-content min-content min-content min-content 1fr;
+      gap: 20rem;
+
+      img {
+        display: flex;
+        justify-content: flex-end;
+        grid-row: 1/2;
+      }
+    }
+  }
+}

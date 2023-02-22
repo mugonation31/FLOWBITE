@@ -1,15 +1,14 @@
-header {
-  border: 1px red solid;
-}
+.nav {
+  border: 1px solid var(--header);
+  // border-top-right-radius: 8px;
+  // border-top-left-radius: 8px;
 
-&__toggle:checked ~ &__dropl {
-  display: block;
-  li {
-    padding: 15rem 10rem;
-    border-bottom: 1px var(--delta) solid;
+  &__main {
+    h1 {
+      font-family: ui-sans-serif, system-ui, Helvetica, Arial, sans-serif, Color,
+        Symbol, Color;
+      font-weight: bold;
+      text-align: center;
+    }
   }
-}
-
-&__hamburger {
-  display: none;
 }
