@@ -424,6 +424,8 @@ body {
 
 .team {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
   padding: 20rem;
 }
 .team__head {
@@ -463,6 +465,7 @@ body {
 .team__member {
   display: grid;
   margin-bottom: 25rem;
+  max-width: 420rem;
   border: 1px solid var(--header);
   border-radius: 8rem;
   background-color: var(--twbc);
@@ -505,10 +508,51 @@ body {
   grid-template-columns: min-content min-content min-content min-content 1fr;
   gap: 20rem;
 }
+.team__socials ul li {
+  list-style: none;
+}
 .team__socials ul img {
   display: flex;
   justify-content: flex-end;
   grid-row: 1/2;
+}
+@media (min-width: 767px) {
+  .team__head {
+    width: 616rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .team__head p {
+    font-size: 20rem;
+  }
+  .team__flow {
+    border: red dotted 1px;
+    display: grid;
+    gap: 30rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    max-width: 1500rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .team__member {
+    display: flex;
+    padding: 10rem 10rem 10rem 0;
+    margin-bottom: 0;
+  }
+  .team__member p {
+    border: 1px red dotted;
+  }
+  .team__picture {
+    background-size: cover;
+  }
+  .team__picture img {
+    background-size: cover;
+    width: 100%;
+    padding-right: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 }
 
 body {

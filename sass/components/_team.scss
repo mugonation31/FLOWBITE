@@ -1,5 +1,7 @@
 .team {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
   padding: 20rem;
 
   &__head {
@@ -43,6 +45,7 @@
   &__member {
     display: grid;
     margin-bottom: 25rem;
+    max-width: 420rem;
     border: 1px solid var(--header);
     border-radius: 8rem;
     background-color: var(--twbc);
@@ -95,10 +98,60 @@
       grid-template-columns: min-content min-content min-content min-content 1fr;
       gap: 20rem;
 
+      li {
+        list-style: none;
+      }
+
       img {
         display: flex;
         justify-content: flex-end;
         grid-row: 1/2;
+      }
+    }
+  }
+
+  @include respond-to("small") {
+    &__head {
+      width: 616rem;
+      margin-right: auto;
+      margin-left: auto;
+
+      p {
+        font-size: 20rem;
+      }
+    }
+
+    &__flow {
+      border: red dotted 1px;
+      display: grid;
+      gap: 30rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, min-content);
+      max-width: 1500rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__member {
+      display: flex;
+      padding: 10rem 10rem 10rem 0;
+      margin-bottom: 0;
+
+      p {
+        border: 1px red dotted;
+      }
+    }
+
+    &__picture {
+      background-size: cover;
+      // width: 100%;
+
+      img {
+        background-size: cover;
+        width: 100%;
+        padding-right: 10rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
       }
     }
   }
